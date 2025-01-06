@@ -12,7 +12,7 @@ jobs:
 
     steps:
       - name: Request PR Review
-        uses: ./request-pr-review
+        uses: HeewonKwak/Algorithm-Study2.0@v1.2.1
         with:
           token: ${{ secrets.TOKEN }} # github token
           KakaoBotToken: '0' # ${{ secrets.KAKAO_BOT_TOKEN }}
