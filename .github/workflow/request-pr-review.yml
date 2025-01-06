@@ -1,0 +1,19 @@
+name: request pr review
+
+on:
+  schedule:
+    # Runs at 10:00 AM KST every Monday and Wednesday
+    - cron: "0 1 * * 1,3"
+  workflow_dispatch:
+
+jobs:
+  cron:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Request PR Review
+        uses: HeewonKwak/Algorithm-Study2.0
+        with:
+          token: ${{ secrets.TOKEN }} # github token
+          KakaoBotToken: '0' # ${{ secrets.KAKAO_BOT_TOKEN }}
+          repoUrl: 'https://github.com/HeewonKwak/Algorithm-Study2.0'
